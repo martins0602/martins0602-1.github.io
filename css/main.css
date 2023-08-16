@@ -27,6 +27,8 @@ The designs were created to the following widths:
 #######
 .whiteCenter = center white frame
 .textField = all the text inside white center
+.bigT = bigger bolder text
+.smallT = smaller thinner text (in white center)
 
 */
 
@@ -35,8 +37,26 @@ The designs were created to the following widths:
 /* execute styles only if width is smaller than height (mobile) */
 @media (max-aspect-ratio: 1/1){
   .whiteCenter{
-    width: 90%;
+    width: 85vw;
+    border-radius: 5vw;
   }
+  img {
+    padding: 5vw;
+    width: 75vw;
+    border-radius: 8vw;
+  }
+  .textField {
+    width:75vw;
+    padding: 5vw;
+  }
+  .bigT{
+    font-size: x-large;
+  }
+  .smallT{
+    font-size: large;
+    padding: 5vw 2.5vw;
+  }
+
 }
 
 body {  /* Light gray */
@@ -54,11 +74,30 @@ body {  /* Light gray */
   align-items:center;
   
 }
+/* added to @media
 img {
-  width: 100%;
-  border-radius: 5px;
+  padding: 5vw;
+  width: 75vw;
+  border-radius: 8vw;
+}
+*/
+.textField {
+  text-align: center; /* CONST */
+  /*  added to @media
+  width:75vw;
+  padding: 5vw;*/
 }
 
-.textField {
-  width:90%;
+.bigT{
+  color: hsl(218, 44%, 22%); /* CONST */
+  font-weight: 700; /* CONST */
+  /* added to @media
+  font-size: x-large;*/
+}
+
+.smallT{
+  color: hsl(220, 15%, 55%); /* CONST */
+  /* added to @media
+  font-size: large;
+  padding: 5vw 2.5vw;*/
 }
