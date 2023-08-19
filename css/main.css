@@ -34,8 +34,8 @@ The designs were created to the following widths:
 
 * {margin:0; padding:0;}
 
-/* execute styles only if width is smaller than height (mobile) */
-@media (max-aspect-ratio: 1/1){
+/* execute styles only if viewport is 2x or more taller than wudth (mobile) */
+@media (max-aspect-ratio: 1/1.6){
   .whiteCenter{
     width: 85vw;
     border-radius: 5vw;
@@ -50,10 +50,35 @@ The designs were created to the following widths:
     padding: 5vw;
   }
   .bigT{
-    font-size: x-large;
+    font-size: 5vw;
   }
   .smallT{
-    font-size: large;
+    font-size: 4vw;
+    padding: 5vw 2.5vw;
+  }
+
+}
+
+/* execute styles only if viewport is 2x taller than wudth to the same width (tablet) */
+@media (min-aspect-ratio: 1/1.6) and (max-aspect-ratio: 1/1){
+  .whiteCenter{
+    width: 75vw;
+    border-radius: 5vw;
+  }
+  img {
+    padding: 5vw;
+    width: 65vw;
+    border-radius: 8vw;
+  }
+  .textField {
+    width:75vw;
+    padding: 5vw;
+  }
+  .bigT{
+    font-size: 5vw;
+  }
+  .smallT{
+    font-size: 4vw;
     padding: 5vw 2.5vw;
   }
 
